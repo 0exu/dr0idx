@@ -4,17 +4,17 @@ This is one demo of a university web with all working function.
 # The technology we gonna use.
 
 - Webpage
-  1. HTML
-  2. CSS
-  3. JavaScript
+  - HTML
+  - CSS
+  - JavaScript
 - Backend
-  1. Golang/Python
+  - Golang/Python
 - Database
-  1. Postgresql/Mariadb(mysql)
+  - Postgresql/Mariadb(mysql)
 - Version Control
-  1. git
+  - git
 - Source Code place
-  1. github
+  - github
   
 > For now this is under devlopment so no need to host this. I will use cloudflare for hosting.
 > The structure doesn't matter but I will not allow any AI slope here.
