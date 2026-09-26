@@ -1,21 +1,24 @@
-<!-- I created this placeholder that you can understand the main logic. -->
-<!-- Let's understand the logic now.
-1. user able to see the page where he/she have to select the role (student/teacher)
-2. After selecting the role he/she will land one login page
-3. After successfull login there will be the main dashboard page
-4. In dashboard page he/she will able to check his/her activity, course, attendence other things mentioned in the requirement.pdf
-
-This is the simple logic now we need to turn this up.-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Brainware Clone</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<div>
-	<p>Placeholder for now</p>
+	<div class="container">
+		<h1> Who you are!?</h1>
+		<select id="roleSelector">
+			<option value=""> Choose Your Role </option>
+			<option value="student"> I am a Student </option>
+			<option value="teacher"> I am a Teacher </option>
+		</select>
+		<button id="submitBtn">Continue</button>
 	</div>
+	<script src="script.js"></script>
 </body>
+
 </html>
