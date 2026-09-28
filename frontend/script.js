@@ -13,9 +13,9 @@ submitBtn.addEventListener('click', function() {
   }
   // main selector...
   if (selectedRole === 'student') {
-    window.location.href = '../student/index.html';
+    window.location.href = '../s_login/s_login.html';
   } else if (selectedRole === 'teacher') {
-    window.location.href = '../teacher/index.html';
+    window.location.href = '../t_login/t_login.html';
   }
 });
 
