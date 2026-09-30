@@ -8,7 +8,7 @@ For better understanding please view the id and classes from html file this will
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   background-image: url("../wall/global.jpg");
   background-size: cover;
   min-height: 100vh;

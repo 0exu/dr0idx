@@ -5,11 +5,46 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-image: url("../wall/global.jpg");
+  font-family: 'JetBrains Mono', monospace;
+  background-image: url("../../wall/global.jpg");
   background-size: cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.first-container {
+  display: flex;
+  width: 100%;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 20px 50px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    min-width: 1780px;
+    position: relative;
+    z-index: 1;
+}
+
+.side-bar {
+    width: 70px;
+    height: 1000px;
+    margin-left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 20px 50px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
