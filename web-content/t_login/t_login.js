@@ -31,6 +31,8 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     });
     const data = await response.json();
     if (response.ok) {
+      sessionStorage.setItem('teacher_auth', '1');
+      sessionStorage.setItem('teacher_tid', data.tid);
       messageDiv.className = 'message success';
       messageDiv.textContent = 'Login successful! Welcome ' + data.tid;
       document.getElementById('loginForm').reset();

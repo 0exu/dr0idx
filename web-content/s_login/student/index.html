@@ -5,20 +5,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dashboard</title>
+	<script>
+		if (sessionStorage.getItem('student_auth') !== '1') window.location.replace('../s_login.html');
+	</script>
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
-    <div class="first-container">
-	    <nav class="side-bar">
+	<div class="first-container">
+		<nav class="side-bar">
 			<a href="./" class="active"><i class="fas fa-home"></i> </a>
-	    </nav>
+		</nav>
 		<div class="container">
-		    <p> This is the Student dashboard placeholder</p>
+			<p> This is the Student dashboard placeholder</p>
 		</div>
 	</div>
+	<script src="script.js"></script>
 </body>
 
 </html>

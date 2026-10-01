@@ -31,6 +31,8 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     });
     const data = await response.json();
     if (response.ok) {
+      sessionStorage.setItem('student_auth', '1');
+      sessionStorage.setItem('student_roll', data.roll);
       messageDiv.className = 'message success';
       messageDiv.textContent = 'Welcome ' + data.name;
       document.getElementById('loginForm').reset();
