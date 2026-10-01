@@ -9,9 +9,16 @@ body {
   background-image: url("../../wall/global.jpg");
   background-size: cover;
   min-height: 100vh;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a.active {
+  display: inline-block;
+  padding: 10px;
+  color: saddlebrown;
 }
 
 .first-container {
@@ -20,31 +27,90 @@ body {
 }
 
 .container {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px auto;
+  /*background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);*/
+  padding: 5px;
+  border-radius: 15px;
+  /*border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 20px 50px 15px rgba(0, 0, 0, 0.6);*/
+  text-align: center;
+  width: 100%;
+  max-width: 1700px;
+  min-height: 90vh;
+  position: flex;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side-bar {
+  width: 60px;
+  height: 900px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   padding: 5px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 20px 50px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.6);
   text-align: center;
-  min-width: 1780px;
   position: relative;
   z-index: 1;
 }
 
-.side-bar {
-  width: 70px;
-  height: 1000px;
-  margin-left: 20px;
+.sub-folder {
+  margin: 0px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   padding: 5px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 20px 50px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.6);
   text-align: center;
   position: relative;
   z-index: 1;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.row2 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+#attendence {
+  width: 100%;
+  height: auto;
+  min-height: 420px;
+}
+
+#s-material {
+  width: 100%;
+  height: auto;
+  min-height: 420px;
+}
+
+#academics {
+  width: 100%;
+  height: auto;
+  min-height: 420px;
+}
+
+#notice {
+  width: 100%;
+  height: auto;
+  height: 420px;
 }
