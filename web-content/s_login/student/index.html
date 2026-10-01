@@ -8,6 +8,7 @@
 	<script>
 		if (sessionStorage.getItem('student_auth') !== '1') window.location.replace('../s_login.html');
 	</script>
+	<link rel="icon" sizes="70x70" href="../../logo-fold/web-logo.png" type="image/png">
 	<link rel="stylesheet" href="style.css">
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap"
@@ -18,27 +19,40 @@
 
 <body>
 	<nav class="side-bar">
-		<a href="./" class="active"><i class="fas fa-home"></i> </a>
-		<a href="#" id="logoutBtn" class="active" aria-label="Sign out"><i class="fas fa-arrow-right-from-bracket"></i> </a>
+		<a href="#home" class="nav-link active" data-page="home"><i class="fas fa-home"></i> </a>
+		<div class="sidebar-mid">
+			<a href="#study-materials" class="nav-link" data-page="study-materials"><i class="fas fa-graduation-cap"></i> </a>
+			<a href="#academics" class="nav-link" data-page="academics"><i class="fas fa-pencil-alt"></i> </a>
+			<a href="#attendence" class="nav-link" data-page="attendence"><i class="fas fa-clipboard-list"></i> </a>
+			<a href="#notices" class="nav-link" data-page="notices"><i class="fas fa-bell"></i> </a>
+		</div>
+		<a href="#" id="logoutBtn" aria-label="Sign out"><i class="fas fa-arrow-right-from-bracket"></i>
+		</a>
 	</nav>
-	<div class="container">
-		<div class="row1">
-			<div class="sub-folder" id="s-material">
-				<p>Study materials</p>
+	<main class="container">
+		<section class="page active" id="home" aria-label="Home">
+			<div class="row1">
+				<div class="sub-folder" id="s-material">
+					<p>Study materials</p>
+				</div>
+				<div class="sub-folder" id="attendence-div">
+					<p>Attendence place</p>
+				</div>
 			</div>
-			<div class="sub-folder" id="attendence">
-				<p>Attendence place</p>
+			<div class="row2">
+				<div class="sub-folder" id="academics-div">
+					<p>Academics Place</p>
+				</div>
+				<div class="sub-folder" id="notice-div">
+					<p>Notice Place</p>
+				</div>
 			</div>
-		</div>
-		<div class="row2">
-			<div class="sub-folder" id="academics">
-				<p>Academics Place</p>
-			</div>
-			<div class="sub-folder" id="notice">
-				<p>Notice Place</p>
-			</div>
-		</div>
-	</div>
+		</section>
+		<section class="page" id="study-materials" aria-label="Study Materials"></section>
+		<section class="page" id="academics" aria-label="Academics"></section>
+		<section class="page" id="attendence" aria-label="Attendence"></section>
+		<section class="page" id="notices" aria-label="Notices"></section>
+	</main>
 	<script src="script.js"></script>
 </body>
 

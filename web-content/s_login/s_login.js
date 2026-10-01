@@ -34,11 +34,11 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
       sessionStorage.setItem('student_auth', '1');
       sessionStorage.setItem('student_roll', data.roll);
       messageDiv.className = 'message success';
-      messageDiv.textContent = 'Welcome ' + data.name;
+      //messageDiv.textContent = 'Welcome ' + data.name;
       document.getElementById('loginForm').reset();
       setTimeout(() => {
         window.location.href = './student/index.html';
-      }, 10000);
+      });
     } else {
       messageDiv.className = 'message error';
       messageDiv.textContent = 'Incorrect Login ' + data.message;

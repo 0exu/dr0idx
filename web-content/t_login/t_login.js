@@ -38,7 +38,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
       document.getElementById('loginForm').reset();
       setTimeout(() => {
         window.location.href = './teacher/index.html';
-      }, 2000);
+      });
     } else {
       messageDiv.className = 'message error';
       messageDiv.textContent = 'Not Found: ' + data.message;
