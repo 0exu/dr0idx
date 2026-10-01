@@ -7,7 +7,7 @@
 body {
   font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
-  background-image: url("../wall/global.jpg");
+  background-image: url("../image-sources/wall/global.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -155,4 +155,16 @@ h1 {
   color: #721c24;
   border: 1px solid #f5c6cb;
   display: block;
+}
+
+#tc-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tc-img img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
 }

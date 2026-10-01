@@ -6,7 +6,7 @@
 
 body {
   font-family: 'JetBrains Mono', monospace;
-  background-image: url("../../wall/global.jpg");
+  background-image: url("../../image-sources/wall/global.jpg");
   background-size: cover;
   min-height: 100vh;
   padding: 20px;

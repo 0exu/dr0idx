@@ -9,7 +9,7 @@ For better understanding please view the id and classes from html file this will
 
 body {
   font-family: 'JetBrains Mono', monospace;
-  background-image: url("../wall/global.jpg");
+  background-image: url("../image-sources/wall/global.jpg");
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -84,4 +84,16 @@ button:hover {
 
 button:active {
   transform: scale(0.98);
+}
+
+#per-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#per-img img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
 }
