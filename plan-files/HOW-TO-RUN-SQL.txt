@@ -1,0 +1,2 @@
+mariadb -u root -p < plan-files/mariadb_mysql.sql
+mariadb -u root -p login < plan-files/seed_data.sql
