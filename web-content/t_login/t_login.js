@@ -33,8 +33,9 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     if (response.ok) {
       sessionStorage.setItem('teacher_auth', '1');
       sessionStorage.setItem('teacher_tid', data.tid);
+      sessionStorage.setItem('teacher_session', data.session_id);
       messageDiv.className = 'message success';
-      messageDiv.textContent = 'Login successful! Welcome ' + data.tid;
+      messageDiv.textContent = 'Login successful! Welcome ' + data.name;
       document.getElementById('loginForm').reset();
       setTimeout(() => {
         window.location.href = './teacher/index.html';

@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dashboard</title>
+	<title>Teacher Dashboard</title>
 	<script>
-		if (sessionStorage.getItem('teacher_auth') !== '1') window.location.replace('../t_login.html');
+		if (sessionStorage.getItem('teacher_auth') !== '1' || !sessionStorage.getItem('teacher_session')) window.location.replace('../t_login.html');
 	</script>
 	<link rel="icon" sizes="70x70" href="../../image-sources/logo-fold/web-logo.png" type="image/png">
 	<link rel="stylesheet" href="style.css">
@@ -19,13 +19,100 @@
 <body>
 	<div class="first-container">
 		<nav class="side-bar">
-			<a href="./" class="active"><i class="fas fa-home"></i> </a>
-			<a href="#" id="logoutBtn" class="active" aria-label="Sign out"><i class="fas fa-arrow-right-from-bracket"></i>
+			<a href="#home" class="nav-link active" data-page="home" aria-label="Home"><i class="fas fa-home"></i></a>
+			<div class="sidebar-mid">
+				<a href="#my-courses" class="nav-link" data-page="my-courses" aria-label="My courses"><i
+						class="fas fa-book"></i></a>
+				<a href="#academics" class="nav-link" data-page="academics" aria-label="Academics"><i
+						class="fas fa-pencil-alt"></i></a>
+				<a href="#attendence" class="nav-link" data-page="attendence" aria-label="Attendence"><i
+						class="fas fa-clipboard-list"></i></a>
+				<a href="#notices" class="nav-link" data-page="notices" aria-label="Notices"><i class="fas fa-bell"></i></a>
+			</div>
+			<a href="#" id="logoutBtn" aria-label="Sign out"><i class="fas fa-arrow-right-from-bracket"></i>
 			</a>
 		</nav>
-		<div class="container">
-			<p> This is the teacher dashboard placeholder</p>
-		</div>
+		<main class="container">
+			<section class="page active" id="home" aria-label="Home">
+				<div class="row1">
+					<div class="sub-folder" id="courses-tile" data-goto="my-courses" role="button" tabindex="0">
+						<p>My courses</p>
+						<strong class="tile-value" id="tile-courses">-</strong>
+						<span class="tile-label">sections taught</span>
+					</div>
+					<div class="sub-folder" id="students-tile" data-goto="my-courses" role="button" tabindex="0">
+						<p>Students</p>
+						<strong class="tile-value" id="tile-students">-</strong>
+						<span class="tile-label">enrolled</span>
+					</div>
+				</div>
+				<div class="row2">
+					<div class="sub-folder" id="materials-tile" data-goto="my-courses" role="button" tabindex="0">
+						<p>Materials</p>
+						<strong class="tile-value" id="tile-materials">-</strong>
+						<span class="tile-label">uploaded</span>
+					</div>
+					<div class="sub-folder" id="notices-tile" data-goto="notices" role="button" tabindex="0">
+						<p>Notices</p>
+						<strong class="tile-value" id="tile-notices">-</strong>
+						<span class="tile-label">posted</span>
+					</div>
+					<p class="tile-foot" id="tile-who">-</p>
+				</div>
+			</section>
+			<section class="page" id="my-courses" aria-label="My courses">
+				<div class="containers">
+					<h2>My courses</h2>
+					<div id="courses-list" class="data-list">
+						<p class="loading">Loading...</p>
+					</div>
+				</div>
+			</section>
+			<section class="page" id="academics" aria-label="Academics">
+				<div class="containers">
+					<h2>Academics</h2>
+					<div id="academics-list" class="data-list">
+						<p class="loading">Loading...</p>
+					</div>
+				</div>
+			</section>
+			<section class="page" id="attendence" aria-label="Attendence">
+				<div class="containers">
+					<h2>Attendence</h2>
+					<div id="attendance-list" class="data-list">
+						<p class="loading">Loading...</p>
+					</div>
+				</div>
+			</section>
+			<section class="page" id="notices" aria-label="Notices">
+				<div class="containers">
+					<h2>Post a notice</h2>
+					<form id="noticeForm" class="notice-form">
+						<input type="text" id="noticeTitle" placeholder="Title" maxlength="200" required>
+						<textarea id="noticeContent" rows="3" placeholder="Notice text" required></textarea>
+						<div class="form-row">
+							<select id="noticePriority">
+								<option value="normal">normal</option>
+								<option value="low">low</option>
+								<option value="high">high</option>
+								<option value="urgent">urgent</option>
+							</select>
+							<select id="noticeAudience">
+								<option value="all">everyone</option>
+								<option value="students">students</option>
+								<option value="teachers">teachers</option>
+							</select>
+							<button type="submit" class="btn">Post</button>
+						</div>
+					</form>
+					<p id="noticeMsg" class="notice-msg"></p>
+					<h2>My notices</h2>
+					<div id="notices-list" class="data-list">
+						<p class="loading">Loading...</p>
+					</div>
+				</div>
+			</section>
+		</main>
 	</div>
 	<script src="script.js"></script>
 </body>
